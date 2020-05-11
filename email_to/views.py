@@ -30,6 +30,9 @@ def index(request):
             except smtplib.SMTPConnectError:
                 # Unable to connect to connect to smtp server
                 messages.warning(request, 'Cannot connect to SMTP server')
+            except smtplib.SMTPAuthenticationError:
+                # Username and Password not accepted (Bad Credential)
+                messages.warning(request, 'Username and Password not accepted')
             else:
                 messages.success(request, 'email sent')
         else:

@@ -18,6 +18,6 @@ class SendEmailForm(forms.Form):
 
     sender_email.widget.attrs.update({'class': 'form-control form-control-sm'})
     receiver_email.widget.attrs.update({'class': 'form-control form-control-sm', 'placeholder': 'example@gmail.com'})
-    subject.widget.attrs.update({'class': 'form-control form-control-sm'})
+    subject.widget.attrs.update({'class': 'form-control form-control-sm', 'autocomplete': 'off'})
     message.widget.attrs.update({'class': 'form-control form-control-sm', 'rows': 5})
     cc_myself.widget.attrs.update({'class': 'form-check-input'})
