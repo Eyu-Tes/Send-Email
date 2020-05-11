@@ -129,12 +129,12 @@ LOCAL_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'crispy_forms'
+#     'crispy_forms'
 ]
 
 
 # Make bootstrap4 the default styling framework for crispy forms
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # This is used to separate the apps
