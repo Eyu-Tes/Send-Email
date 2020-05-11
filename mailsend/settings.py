@@ -20,18 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# Hidden SECRET_KEY
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = 'q#$d!pq*sreprmk65-cmxf5npj3bo)l%*ur102nx@#4#)-jg$y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Debug turned off for production
-DEBUG = False
+# With debug turned off Django won't handle static files for you any more - your production web server (Apache or something) should take care of that.
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eyoab.pythonanywhere.com']
 
 
 # Application definition
-# I changed name from 'INSTALLED_APPS' to 'DEFAULT_APPS'
+
 DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,27 +121,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-##################################################################
-# -------------------------- My Changes -------------------------
-##################################################################
-
-# Apps created locally inside the project
+# --------------------------------------------------------------------
 LOCAL_APPS = [
-    'email_to.apps.EmailToConfig',
+    'email_to.apps.EmailToConfig'
 ]
 
 THIRD_PARTY_APPS = [
-#     'crispy_forms'
+
 ]
 
-
-# Make bootstrap4 the default styling framework for crispy forms
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-
-# This is used to separate the apps
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
-
 
 # Alert Messages that align with the bootstrap 'alert' class
 from django.contrib.messages import constants as messages
@@ -153,7 +141,6 @@ MESSAGE_TAGS = {
     messages.WARNING: 'warning',
     messages.ERROR: 'danger',
 }
-
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
