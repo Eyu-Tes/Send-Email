@@ -25,7 +25,7 @@ SECRET_KEY = 'vu_fto)-gi-iwl2(mbw$$$(nwrkd9w$8fery$_d=2xngt_c86i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eyoab.pythonanywhere.com']
 
 
 # Application definition
