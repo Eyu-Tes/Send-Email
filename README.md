@@ -11,7 +11,7 @@ It demonstrates:
 				
 
 ## Prerequisite for Sending E-mail
-To send email from an unauthorized app, there are 2 options:
-i. Allow Less Secure App Access - Not Recommended [<a href="https://devanswers.co/allow-less-secure-apps-access-gmail-account/" target="_blank">more</a>]
+To send email from an unauthorized app, there are 2 options: <br>
+i. Allow Less Secure App Access - Not Recommended [<a href="https://devanswers.co/allow-less-secure-apps-access-gmail-account/" target="_blank">more</a>] <br>
 ii. Add App Passwords - Requires Enabling a 2-Step Verification [<a href="https://devanswers.co/create-application-specific-password-gmail/" target="_blank">more</a>]
 
