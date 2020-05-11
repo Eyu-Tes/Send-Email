@@ -23,8 +23,7 @@ def index(request):
                 recipient_list.append(from_email)
 
             try:
-                pass
-                # mail.send_mail(subject, message, from_email, recipient_list)
+                mail.send_mail(subject, message, from_email, recipient_list)
             except socket.gaierror:
                 # Failed to get address info. of EMAIL_HOST: 'smtp.gmail.com'
                 messages.warning(request, 'Unable to get Address Information')

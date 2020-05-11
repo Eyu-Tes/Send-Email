@@ -9,7 +9,7 @@ class SendEmailForm(forms.Form):
                                     )
     receiver_email = forms.EmailField(label="Receiver",
                                       error_messages={
-                                          'required': "Dumbne$$, who are u sending it to?"
+                                          'required': "Who are you emailing to?"
                                       })
     subject = forms.CharField(required=False, max_length=100)
     message = forms.CharField(help_text='Your can write anything you want ...',
