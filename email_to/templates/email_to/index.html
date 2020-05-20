@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="{% static 'email_to/custom/style.css' %}">
 </head>
 <body>
-    <div class='container py-5'>
+    <div class='container py-3'>
         <div class="row">
             <div class="col-lg-6 col-md-9">
                 {% if messages %}
                     {% for message in messages %}
-                        <div class="alert alert-{{message.tags}}">{{ message }}</div>
+                        <div class="alert alert-{{message.tags}} py-2">{{ message }}</div>
                     {% endfor %}
                 {% endif %}
 
@@ -26,8 +26,8 @@
                     {% csrf_token %}
                     {{ form.non_field_errors }}
 
-                    <fieldset class="form-group border-bottom mb-4 py-3">
-                        <legend class="border-bottom mb-4">Send Message</legend>
+                    <fieldset class="form-group border-bottom mb-3 pt-3 pb-1">
+                        <legend class="border-bottom mb-3">Send Message</legend>
 
                         <div class="form-group">
                             <label for={{ form.sender_email.name }}>{{form.sender_email.label}}</label>
@@ -36,7 +36,7 @@
                                 {% for error in form.sender_email.errors %}
                                     <strong id="error_{{ forloop.counter }}">{{ error }}</strong>
                                 {% endfor %}
-                            </div> 
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -47,7 +47,7 @@
                                     {% for error in form.receiver_email.errors %}
                                         <strong id="error_{{ forloop.counter }}">{{ error }}</strong>
                                     {% endfor %}
-                                </div> 
+                                </div>
                             {% else %}
                                 {{ form.receiver_email }}
                             {% endif %}
@@ -60,7 +60,7 @@
                                 {% for error in form.subject.errors %}
                                     <strong id="error_{{ forloop.counter }}">{{ error }}</strong>
                                 {% endfor %}
-                            </div> 
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -71,7 +71,7 @@
                                     {% for error in form.message.errors %}
                                         <strong id="error_{{ forloop.counter }}">{{ error }}</strong>
                                     {% endfor %}
-                                </div> 
+                                </div>
                             {% else %}
                                 {{ form.message }}
                             {% endif %}
@@ -85,24 +85,14 @@
                                 {% for error in form.cc_myself.errors %}
                                     <strong id="error_{{ forloop.counter }}">{{ error }}</strong>
                                 {% endfor %}
-                            </div> 
+                            </div>
                         </div>
                     </fieldset>
-                <button type="submit" class="btn btn-outline-primary">Send</button>
+                <button type="submit" class="btn btn-block btn-sm btn-outline-primary">Send</button>
             </form>
         </div>
     </div>
 </div>
 
-    
-    
-
-    {% comment "This is the most basic way to render a form" %}
-    <form action="" method="post" novalidate>
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Send</button>
-    </form>
-    {% endcomment %}
 </body>
 </html>

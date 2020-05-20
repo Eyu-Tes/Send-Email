@@ -20,10 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'q#$d!pq*sreprmk65-cmxf5npj3bo)l%*ur102nx@#4#)-jg$y'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# With debug turned off Django won't handle static files for you any more - your production web server (Apache or something) should take care of that.
+# With debug turned off Django won't handle static files for you any more,
+# your production web server (Apache or something) should take care of that.
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eyoab.pythonanywhere.com']
@@ -148,4 +149,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('PRIMARY_EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('PRIMARY_EMAIL_PASSWORD')
+EMAIL_HOST_PASSWORD = os.environ.get('PRIMARY_EMAIL_APP_PASSWORD')

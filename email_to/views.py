@@ -1,7 +1,7 @@
 import socket
 import smtplib
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.contrib import messages
 from django.core import mail
 
