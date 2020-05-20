@@ -17,4 +17,4 @@ ii. Add App Passwords - Requires Enabling a 2-Step Verification [<a href="https:
 <br>
 <u>Note:</u>
 <br>
-- The values for <code>SECRET_KEY</code>, <code>EMAIL_HOST_USER</code> and <code>EMAIL_HOST_PASSWORD</code> are stored in environment variables, so configure them on your system accordingly. Refer to <i>settings.py</i>
+- The values for <code>SECRET_KEY</code>, <code>EMAIL_HOST_USER</code> and <code>EMAIL_HOST_PASSWORD</code> are stored in a local environment variables, so configure them on your system accordingly. Refer to <i>settings.py</i>
